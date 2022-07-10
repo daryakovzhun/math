@@ -11,11 +11,11 @@ long double s21_exp(double x) {
     } else if (x_long == S21_INF) {
         result = S21_INF;
     } else {
-        for (long double i = 1; fabsl(taylor_member) > 1e-100; i++) {
+        for (long double i = 1; s21_fabs(taylor_member) > 1e-100; i++) {        //  fabsl
             taylor_member *= x_long / i;
             result += taylor_member;
         }
     }
-     
+
     return result;
 }

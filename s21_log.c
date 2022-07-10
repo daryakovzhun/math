@@ -1,6 +1,6 @@
 #include "s21_math.h"
 
-long double s21_log(double x){
+long double s21_log(double x) {
     long double result = 0, taylor_member = 1;
     int exp_pow = 0;
 
@@ -13,7 +13,7 @@ long double s21_log(double x){
     } else if (x == S21_INF) {
         result = S21_INF;
     } else  if (x == S21_NAN) {
-        return S21_NAN;
+        result = S21_NAN;
     } else {
         // for (int i = 1; fabsl(taylor_member / i) > 1e-100; i++) {
         //     taylor_member *= ((x - 1) / (x + 1));

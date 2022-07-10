@@ -1,13 +1,17 @@
 #ifndef SRC_S21_MATH_H_
 #define SRC_S21_MATH_H_
 
-#include <math.h>   /////DELETE
 #include <stdio.h>
+#include <errno.h>
 
 #define S21_NAN __builtin_nanf("")
 #define S21_INF __builtin_inf()
-#define S21_EPS 1e-6
+#define S21_EPS 1e-30
 #define S21_EXP 2.7182818284590452353602874713526624977572
+#define S21_M_PI 3.14159265358979323846264338327950288
+#define S21_M_PI_2 1.57079632679489661923132169163975144
+#define s21_isinf(x) __builtin_isinf(x)
+#define s21_isnan(x) __builtin_isnan(x)
 
 int s21_abs(int x);
 long double s21_acos(double x);
